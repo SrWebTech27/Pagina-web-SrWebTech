@@ -1,0 +1,51 @@
+/*
+Custom Css
+*/
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    padding: 16px 17px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+    color: #fff;
+    text-decoration: none;
+}
+
+.whatsapp-float i {
+    font-size: 30px;
+}
+/* Animación de flotación */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Cuando se presiona el botón */
+.whatsapp-float:active {
+    animation: floatUp 0.4s ease-in-out;
+}
+
+/* Flotación suave constante (opcional y elegante) */
+.whatsapp-float {
+    animation: floatUp 1.5s ease-in-out infinite;
+}
