@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>SR WebTech - Contacto</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/Logo.jpeg">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/Logo.jpeg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    
+    <style>
+        .contact-h1 { font-weight: 700; color: #59ab6e; }
+        .gradient-custom {
+            background: linear-gradient(to right, rgba(89, 171, 110, 0.1), rgba(0, 0, 0, 0.05));
+            border-radius: 15px;
+        }
+        .form-control:focus {
+            border-color: #59ab6e;
+            box-shadow: 0 0 0 0.25 rgba(89, 171, 110, 0.3);
+        }
+        .btn-success { background-color: #59ab6e !important; border: none; }
+        .btn-success:hover { background-color: #488a58 !important; transform: translateY(-2px); transition: 0.3s; }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">SR WebTech</a>
+            <div class="collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-light py-5">
+        <div class="col-md-6 m-auto text-center">
+            <h1 class="contact-h1">¿Tienes dudas? ¡Escríbenos!</h1>
+            <p class="lead">Estamos listos para potenciar tu negocio con soluciones tecnológicas a medida.</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row py-5 gradient-custom shadow-sm p-4">
+            <div class="col-md-5 mb-4">
+                <h2 class="h3 mb-4">Información de contacto</h2>
+                <p><i class="fa fa-envelope me-2 text-success"></i> <strong>Email:</strong><br>srcreativeweb@gmail.com</p>
+                <p><i class="fa fa-phone me-2 text-success"></i> <strong>WhatsApp:</strong><br>+51 929 107 144</p>
+                <p><i class="fab fa-instagram me-2 text-success"></i> <strong>Instagram:</strong><br>@srwebtech</p>
+            </div>
+            
+            <form class="col-md-7" action="https://formspree.io/f/mojvrkek" method="POST">
+                <div class="row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="full-name">Nombre Completo</label>
+                        <input type="text" class="form-control mt-1" id="full-name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="email-address">Tu Correo Electrónico</label>
+                        <input type="email" class="form-control mt-1" id="email-address" name="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="form-subject">Asunto / Proyecto</label>
+                    <input type="text" class="form-control mt-1" id="form-subject" name="subject" placeholder="Ej: Desarrollo de App Móvil">
+                </div>
+                <div class="mb-3">
+                    <label for="form-message">Cuéntanos tus dudas</label>
+                    <textarea class="form-control mt-1" id="form-message" name="message" placeholder="¿En qué podemos ayudarte?" rows="6" required></textarea>
+                </div>
+                
+                <input type="hidden" name="_subject" value="Nueva consulta: SR WebTech">
+                
+                <div class="row">
+                    <div class="col text-end mt-2">
+                        <button type="submit" class="btn btn-success btn-lg px-5 shadow-sm">Enviar Mensaje</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-dark py-4" id="tempaltemo_footer">
+        <div class="container text-center text-white">
+            <p class="mb-0">SR WebTech 2026 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
