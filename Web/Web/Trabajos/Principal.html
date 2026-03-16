@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SrWebTech - Agencia Digital de Élite. Diseñamos interfaces y desarrollamos arquitecturas web escalables.">
+    <title>SrWebTech | Elite Digital Agency</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root { 
+            --primary: #3b82f6; 
+            --secondary: #8b5cf6; 
+        }
+        body { 
+            font-family: 'Space Grotesk', sans-serif; 
+            background: #000; 
+            color: #fff;
+            overflow-x: hidden;
+            cursor: none; /* Oculta el cursor por defecto en desktop */
+        }
+        
+        /* Cursor Personalizado */
+        #cursor {
+            width: 24px; 
+            height: 24px; 
+            border: 2px solid var(--primary);
+            border-radius: 50%; 
+            position: fixed; 
+            pointer-events: none;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease; 
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Fondo Animado */
+        .bg-animate {
+            background: linear-gradient(45deg, #000, #0a0f1c, #000);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            position: relative;
+        }
+        .bg-animate::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Tarjetas de Proyecto */
+        .project-card {
+            position: relative; 
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .project-card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.2);
+            transform: translateY(-8px);
+        }
+        
+        /* Efectos extra para el texto */
+        .text-glow { 
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.4); 
+        }
+    </style>
+</head>
+<body class="bg-animate">
+
+    <div id="cursor" class="hidden md:block"></div>
+
+    <nav id="navbar" class="fixed w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10 p-6 md:px-10 flex justify-between items-center transition-all duration-300">
+        <div class="text-2xl font-bold tracking-widest italic cursor-pointer">SR<span class="text-blue-500 italic">WEB</span>TECH</div>
+        <div class="flex gap-6 items-center">
+            <a href="https://wa.me/51948452736" class="text-sm font-bold border border-white/50 px-6 py-2 rounded-full hover:bg-white hover:text-black transition-all uppercase tracking-tighter shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]" target="_blank" rel="noopener noreferrer">
+                Contactar <i class="fab fa-whatsapp ml-2"></i>
+            </a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center px-6 md:px-20 pt-20 relative">
+        <div data-aos="fade-up" data-aos-duration="1200" class="max-w-6xl mx-auto w-full">
+            <div class="inline-block border border-blue-500/30 bg-blue-500/10 text-blue-400 font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mb-6 px-4 py-2 rounded-full backdrop-blur-sm">
+                <i class="fas fa-check-circle mr-2"></i>Agencia Digital Certificada
+            </div>
+            
+            <h1 class="text-5xl md:text-[8rem] font-bold leading-[0.9] mb-8 tracking-tighter">
+                PRODUCTOS <br> 
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 text-glow" style="-webkit-text-stroke: 1px rgba(255,255,255,0.1);">
+                    ESPECIALIZADOS
+                </span>
+            </h1>
+            
+            <div class="flex flex-col md:flex-row gap-10 items-start justify-between border-t border-white/10 pt-10">
+                <p class="max-w-xl text-gray-400 text-lg md:text-xl font-light">
+                    Diseñamos interfaces que cautivan y desarrollamos arquitecturas que escalan. <span class="text-white font-medium">SrWebTech</span> es donde la estética se encuentra con la ingeniería de alto rendimiento.
+                </p>
+                <div class="flex flex-col items-start md:items-end gap-4">
+                    <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">Nuestras Redes</p>
+                    <div class="flex gap-6 text-2xl">
+                        <a href="https://www.youtube.com/@SRWebTech-19" aria-label="YouTube" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition transform hover:scale-110 hover:-translate-y-1"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/srwebtech" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition transform hover:scale-110 hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@srwebtech" aria-label="TikTok" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition transform hover:scale-110 hover:-translate-y-1"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 flex flex-wrap gap-4 md:gap-6 text-xs font-bold text-gray-500 uppercase tracking-widest">
+                <span class="hover:text-blue-400 transition-colors cursor-default">React.js</span> <span class="text-gray-800 hidden md:inline">•</span>
+                <span class="hover:text-blue-400 transition-colors cursor-default">Tailwind CSS</span> <span class="text-gray-800 hidden md:inline">•</span>
+                <span class="hover:text-blue-400 transition-colors cursor-default">Node.js</span> <span class="text-gray-800 hidden md:inline">•</span>
+                <span class="hover:text-purple-400 transition-colors cursor-default">Figma UI/UX</span> <span class="text-gray-800 hidden md:inline">•</span>
+                <span class="hover:text-orange-400 transition-colors cursor-default">AWS Cloud</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="py-20 px-6 md:px-10 max-w-[1400px] mx-auto">
+        <div class="flex items-center justify-between mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-tighter" data-aos="fade-right">Trabajos Recientes</h2>
+            <div class="h-[1px] bg-white/10 flex-grow ml-10 hidden md:block" data-aos="fade-left"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="project-card h-[400px] md:h-[450px] group bg-[#080808] rounded-3xl p-8 cursor-pointer" data-aos="fade-up">
+                <div class="w-full h-full relative z-10">
+                    <img src="Trabajos/cafeteria .jpeg" alt="Sistema Cafetería" class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition duration-700 drop-shadow-2xl opacity-70 group-hover:opacity-100">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent p-10 flex flex-col justify-end z-20">
+                    <span class="text-xs text-blue-500 font-bold mb-2 tracking-[0.2em] uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">01 / UI Design</span>
+                    <h3 class="text-3xl font-bold text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">SISTEMA CAFETERÍA</h3>
+                </div>
+            </div>
+            
+            <div class="project-card h-[400px] md:h-[450px] group bg-[#080808] rounded-3xl p-8 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-full h-full relative z-10">
+                    <img src="Trabajos/podologia.jpeg" alt="J&M Podología" class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition duration-700 drop-shadow-2xl opacity-70 group-hover:opacity-100">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent p-10 flex flex-col justify-end z-20">
+                    <span class="text-xs text-blue-500 font-bold mb-2 tracking-[0.2em] uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">02 / Branding & Web</span>
+                    <h3 class="text-3xl font-bold text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">J&M PODOLOGÍA</h3>
+                </div>
+            </div>
+
+            <div class="project-card h-[400px] md:h-[450px] group bg-[#080808] rounded-3xl p-8 cursor-pointer" data-aos="fade-up">
+                <div class="w-full h-full relative z-10">
+                    <img src="Trabajos/Taully logo.jpg" alt="Taully Corporate" class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition duration-700 drop-shadow-2xl opacity-70 group-hover:opacity-100">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent p-10 flex flex-col justify-end z-20">
+                    <span class="text-xs text-blue-500 font-bold mb-2 tracking-[0.2em] uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">03 / Aplicacion Movil</span>
+                    <h3 class="text-3xl font-bold text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">TAULLY CORPORATE</h3>
+                </div>
+            </div>
+
+            <div class="project-card h-[400px] md:h-[450px] group bg-[#080808] rounded-3xl p-8 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-full h-full relative z-10">
+                    <img src="Trabajos/tesisperu.png" alt="Tesis Perú" class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition duration-700 drop-shadow-2xl opacity-70 group-hover:opacity-100">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent p-10 flex flex-col justify-end z-20">
+                    <span class="text-xs text-blue-500 font-bold mb-2 tracking-[0.2em] uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">04 / Plataforma Web</span>
+                    <h3 class="text-3xl font-bold text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">TESIS PERÚ</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-zinc-50 text-black px-6 md:px-10 relative mt-20 rounded-t-[3rem] md:rounded-t-[5rem]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20" data-aos="zoom-in">
+                <span class="text-blue-600 font-bold tracking-[0.2em] uppercase text-xs mb-4 block">El talento detrás del código</span>
+                <h2 class="text-5xl md:text-6xl font-black tracking-tighter">EQUIPO ÉLITE</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 justify-items-center">
+                
+                <div class="group flex flex-col items-center w-full max-w-[280px]" data-aos="fade-up">
+                    <div class="w-full aspect-[3/4] bg-gray-200 overflow-hidden mb-6 rounded-2xl shadow-lg relative cursor-pointer">
+                        <img src="img/Dominguez.jpeg" alt="Julinho Gaudencio Dominguez Alfaro" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-xl font-black tracking-tighter leading-tight mb-3">Julinho Gaudencio<br>Dominguez Alfaro</h4>
+                        <span class="bg-black text-white text-[10px] px-4 py-2 rounded-full uppercase tracking-widest font-bold">Desarrollador UX/UI</span>
+                    </div>
+                </div>
+
+                <div class="group flex flex-col items-center w-full max-w-[280px]" data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-full aspect-[3/4] bg-gray-200 overflow-hidden mb-6 rounded-2xl shadow-lg relative cursor-pointer">
+                        <img src="img/Perez.jpeg" alt="Perez Perez Jeanpaul Joseph" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-xl font-black tracking-tighter leading-tight mb-3">Perez Perez<br>Jeanpaul Joseph</h4>
+                        <span class="bg-black text-white text-[10px] px-4 py-2 rounded-full uppercase tracking-widest font-bold">Desarrollador UX/UI</span>
+                    </div>
+                </div>
+
+                <div class="group flex flex-col items-center w-full max-w-[280px] sm:col-span-2 md:col-span-1" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-full max-w-[280px] aspect-[3/4] bg-gray-200 overflow-hidden mb-6 rounded-2xl shadow-lg relative cursor-pointer">
+                        <img src="img/Rivera.jpg" alt="Esau Jonas Rivera Marcos" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-xl font-black tracking-tighter leading-tight mb-3">Esau Jonas<br>Rivera Marcos</h4>
+                        <span class="bg-black text-white text-[10px] px-4 py-2 rounded-full uppercase tracking-widest font-bold">Desarrollador UX/UI</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zinc-50 pt-10 pb-20 px-6 md:px-10 text-center text-black">
+        <div class="max-w-4xl mx-auto border-t border-black/10 pt-16">
+            <p class="text-5xl md:text-[6rem] font-black opacity-5 mb-8 tracking-tighter leading-none select-none">SRWEBTECH</p>
+            <div class="flex justify-center gap-6 md:gap-10 mb-12 uppercase text-[10px] md:text-xs font-bold tracking-widest">
+                <a href="https://www.instagram.com/srwebtech" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">Instagram</a>
+                <a href="https://www.tiktok.com/@srwebtech" aria-label="TikTok" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">TikTok</a>
+                <a href="https://www.youtube.com/@SRWebTech-19" aria-label="YouTube" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">YouTube</a>
+            </div>
+            <p class="text-gray-400 text-[10px] tracking-[3px] uppercase font-bold">© 2026 SrWebTech. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar animaciones AOS
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+        
+        // Lógica del Navbar en Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/80', 'py-4');
+                navbar.classList.remove('bg-black/20', 'py-6');
+            } else {
+                navbar.classList.add('bg-black/20', 'py-6');
+                navbar.classList.remove('bg-black/80', 'py-4');
+            }
+        });
+
+        // Custom Cursor Lógica Mejorada
+        const cursor = document.getElementById('cursor');
+        
+        // Solo ejecutar lógica de cursor si estamos en un dispositivo no táctil (desktop)
+        if (window.matchMedia("(pointer: fine)").matches) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            // Efecto hover en elementos interactivos
+            const interactiveElements = document.querySelectorAll('a, .project-card, button, .cursor-pointer');
+            
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
+                    cursor.style.backgroundColor = 'rgba(59, 130, 246, 0.15)';
+                    cursor.style.borderColor = 'rgba(59, 130, 246, 0.5)';
+                });
+                
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                    cursor.style.backgroundColor = 'transparent';
+                    cursor.style.borderColor = 'var(--primary)';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
